@@ -18,6 +18,10 @@ int main(void)
     {
         printf("%02d is positive\n", n);
     }
+    else if (n==)
+    {
+        printf("%02d is zero\n", 0);
+    }
     else
     {
         printf("%02d is negative\n", -n);
