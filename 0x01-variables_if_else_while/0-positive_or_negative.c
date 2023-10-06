@@ -9,8 +9,10 @@
  */
 int main(void)
 {
+    int n;
+    
     srand(time(NULL));
-    int n = rand() % 201 - 100;
+    n = rand() % 201 - 100;
 
     printf("The number %d is ", n);
     if (n > 0)
