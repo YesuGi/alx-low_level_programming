@@ -9,23 +9,23 @@
  */
 int main(void)
 {
-    int n;
-    
-    srand(time(NULL));
-    n = rand() % 201 - 100;
+	int n;
 
-    if (n > 0)
-    {
-        printf("%02d is positive\n", n);
-    }
-    else if (n < 0)
-    {
-        printf("%02d is negative\n", -n);
-    }
-    else
-    {
-        printf("0 is zero\n");
-    }
+	srand(time(NULL));
+	n = rand() % 201 - 100;
 
-    return 0;
+	if (n > 0)
+	{
+		printf("%d is positive\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+	else
+	{
+		printf("0 is zero\n");
+	}
+
+	return 0;
 }
