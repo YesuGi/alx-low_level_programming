@@ -14,17 +14,17 @@ int main(void)
     srand(time(NULL));
     n = rand() % 201 - 100;
 
-    if (n >= 0)
+    if (n > 0)
     {
         printf("%02d is positive\n", n);
     }
-    else if (n==0)
+    else if (n < 0)
     {
-        printf("%02d is zero\n", 0);
+        printf("%02d is negative\n", -n);
     }
     else
     {
-        printf("%02d is negative\n", -n);
+        printf("0 is zero\n");
     }
 
     return 0;
