@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - Prints the digits from 0 to 9 followed by the lowercase letters from a to f.
+ * main - Prints the digits from 0 to 9 and letters between a to f.
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char digit;
+    char digit;
 
-	for (digit = '0'; digit <= '9'; digit++)
-		putchar(digit);
+    for (digit = '0'; digit <= '9'; digit++)
+        putchar(digit);
 
-	for (digit = 'a'; digit <= 'f'; digit++)
-		putchar(digit);
+    for (digit = 'a'; digit <= 'f'; digit++)
+        putchar(digit);
 
-	putchar('\n');
+    putchar('\n');
 
-	return (0);
+    return (0);
 }
