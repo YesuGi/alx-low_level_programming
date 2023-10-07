@@ -1,17 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase.
+ * main - Prints all possible combinations of two-digit numbers.
  *
  * Return: Always 0 (Success).
  */
 int main(void)
 {
-    char letter;
+    int digit1, digit2;
 
-    for (letter = 'a'; letter <= 'z'; letter++)
+    for (digit1 = 0; digit1 < 10; digit1++)
     {
-        putchar(letter);
+        for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+        {
+            putchar(digit1 + '0');
+            putchar(digit2 + '0');
+
+            if (digit1 != 8 || digit2 != 9)
+            {
+                putchar(',');
+                putchar(' ');
+            }
+        }
     }
 
     putchar('\n');
