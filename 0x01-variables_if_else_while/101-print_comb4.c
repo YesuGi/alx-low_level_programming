@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - Prints all possible combinations of three-digit numbers.
- *
- * Return: Always 0 (Success).
- */
 int main(void)
 {
     int i, j, k;
