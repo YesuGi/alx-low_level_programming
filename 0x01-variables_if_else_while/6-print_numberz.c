@@ -1,22 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Prints the digits from 0 to 9.
+ * main - Prints the alphabet in lowercase.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	putchar('0');
-	putchar('1');
-	putchar('2');
-	putchar('3');
-	putchar('4');
-	putchar('5');
-	putchar('6');
-	putchar('7');
-	putchar('8');
-	putchar('9');
+	int letter;
+
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		putchar(letter);
+	}
+
 	putchar('\n');
 
 	return (0);
