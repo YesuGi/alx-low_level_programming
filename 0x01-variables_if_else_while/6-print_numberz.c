@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase.
+ * main - Prints the digits from 0 to 9.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int letter;
+    int digit;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		putchar(letter);
-	}
+    for (digit = 0; digit < 10; digit++)
+    {
+        putchar('0' + digit);
+    }
 
-	putchar('\n');
+    putchar('\n');
 
-	return (0);
+    return 0;
 }
