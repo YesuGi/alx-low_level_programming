@@ -1,20 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase.
+ * main - Prints the digits from 0 to 9 followed by the lowercase letters from a to f.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	char letter;
+    char digit;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		putchar(letter);
-	}
+    for (digit = '0'; digit <= '9'; digit++)
+    {
+        putchar(digit);
+    }
 
-	putchar('\n');
+    for (digit = 'a'; digit <= 'f'; digit++)
+    {
+        putchar(digit);
+    }
 
-	return (0);
+    putchar('\n');
+
+    return 0;
 }
