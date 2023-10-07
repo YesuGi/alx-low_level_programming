@@ -1,28 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of four-digit numbers.
+ * main - Prints all possible combinations of three-digit numbers.
  *
  * Return: Always 0 (Success).
  */
 int main(void)
 {
-    int i, j, k, l;
+    int i, j, k;
 
-    for (i = 0; i <= 9; i++)
+    for (i = 0; i <= 7; i++)
     {
-        for (j = i + 1; j <= 9; j++)
+        for (j = i + 1; j <= 8; j++)
         {
             for (k = j + 1; k <= 9; k++)
             {
-                for (l = k + 1; l <= 9; l++)
-                {
-                    printf("%d%d%d%d", i, j, k, l);
+                printf("%d%d%d", i, j, k);
 
-                    if (i != 6 || j != 7 || k != 8 || l != 9)
-                    {
-                        printf(", ");
-                    }
+                if (i != 7 || j != 8 || k != 9)
+                {
+                    printf(", ");
                 }
             }
         }
