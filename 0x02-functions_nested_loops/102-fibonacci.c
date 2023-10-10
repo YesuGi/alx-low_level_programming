@@ -7,25 +7,18 @@
 
 int main(void)
 {
-    long int i, a, b, temp;
+	long int i, a, b, sum;
 
-    a = 1;
-    b = 2;
+	a = 1;
+	b = 2;
 
-    printf("%ld, %ld, ", a, b);
-
-    for (i = 0; i < 46; i++) {
-        temp = a + b;
-        printf("%ld", temp);
-
-        if (i != 45)
-            printf(", ");
-
-        a = b;
-        b = temp;
-    }
-
-    printf("\n");
-
-    return 0;
+	for (i = 0, sum = 0; a < 4000000; i++)
+	{
+		if (!(a % 2))
+			sum += a;
+		b = a + b;
+		a = b - a;
+	}
+	printf("%ld\n", sum);
+	return (0);
 }
