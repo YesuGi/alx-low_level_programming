@@ -1,30 +1,30 @@
 #include <stdio.h>
-
 /**
- * main - prints sum of even-valued fibonacci numbers under 4,000,000
- * Return: 0 if succesfull
+ * main - main block
+ * Description: Print the first 50 fibonacci numbers, starting with 1 and 2.
+ * Numbers must be coma and space separated.
+ * Return: 0
  */
-
-int main(void) {
-    long int i, a, b, temp;
-
-    a = 1;
-    b = 2;
-
-    printf("%ld, %ld, ", a, b);
-
-    for (i = 0; i < 46; i++) {
-        temp = a + b;
-        printf("%ld", temp);
-
-        if (i != 45)
-            printf(", ");
-
-        a = b;
-        b = temp;
-    }
-
-    printf("\n");
-
-    return 0;
+int main(void)
+{
+	int count = 2;
+	long int i = 1, j = 2;
+	long int k;
+	printf("%lu, ", i);
+	while (count <= 50)
+	{
+		if (count == 50)
+		{
+			printf("%lu\n", j);
+		}
+		else
+		{
+			printf("%lu, ", j);
+		}
+		k = j;
+		j += i;
+		i = k;
+		count++;
+	}
+	return (0);
 }
