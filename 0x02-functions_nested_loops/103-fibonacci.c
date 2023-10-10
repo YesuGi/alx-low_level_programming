@@ -1,20 +1,16 @@
 #include <stdio.h>
 
-/**
- * main - prints sum of even-valued fibonacci numbers under 4,000,000
- * Return: 0 if succesfull
- */
-
 int fibonacci_sum(int limit) {
     int sum = 0;
     int a = 1, b = 2;
     
     while (a <= limit) {
+        int temp = a;  // Move the declaration to the beginning of the block
+        
         if (a % 2 == 0) {
             sum += a;
         }
         
-        int temp = a;
         a = b;
         b = temp + b;
     }
