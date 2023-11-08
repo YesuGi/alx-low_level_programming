@@ -1,30 +1,15 @@
-#include "main.h"
+#include "function_pointers.h"
 
 /**
- * _strcat - concatenates two strings
- * @dest: string to append to
- * @src: string to add
+ * print_name - a function that prints a name.
+ * @name: the name given
+ * @f: function of name
  *
- * Return: a pointer to the resulting string
+ * Rteurn: void
  */
-char *_strcat(char *dest, char *src)
+void print_name(char *name, void (*f)(char *))
 {
-	int i, j;
+	if (name != NULL && f != NULL)
 
-	i = 0;
-	j = 0;
-
-	while (dest[i] != '\0')
-		i++;
-
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-
-	dest[i] = '\0';
-
-	return (dest);
+		f(name);
 }

@@ -1,31 +1,26 @@
-#include "main.h"
+#include "function_pointers.h"
 
 /**
- * _strncat - concatenates n bytes from a string to another
- * @dest: destination string
- * @src: source string
- * @n: number of bytes of str to concatenate
+ * array_iterator - a function given as a
+ * parameter on each element of an array.
  *
- * Return: a pointer to the resulting string dest
+ * @array: array to execute func on
+ * @size: is the size of the array
+ * @action:  is a pointer to the function you need to use
+ *
+ * Return: void
  */
-char *_strncat(char *dest, char *src, int n)
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i, j;
+	size_t i;
 
-	i = 0;
-	j = 0;
-
-	while (dest[i] != '\0')
-		i++;
-
-	while (src[j] != '\0' && j < n)
+	if (array && action)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		i = 0;
+		while (i < size)
+		{
+			action(array[i]);
+			i++;
+		}
 	}
-
-	dest[i] = '\0';
-
-	return (dest);
 }
